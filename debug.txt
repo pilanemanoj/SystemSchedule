@@ -7,3 +7,49 @@
 [2025-11-01 16:28:04] Backup Process Started.
 [2025-11-01 16:28:04] No schedule CSV found
 [2025-11-01 16:28:04] No enabled schedule found
+[2025-11-01 16:34:53] Backup Process Started.
+[2025-11-01 16:34:53] Running schedule: FileBackupTask
+[2025-11-01 16:34:53] Running task: Copy Env (Backup type: zip)
+[2025-11-01 16:34:59] Task Copy Env completed: Zipped to: C:/Users/manojkumar.pilane/Documents/Python/Backup\ENV.zip
+[2025-11-01 16:35:22] Backup Process Started.
+[2025-11-01 16:35:22] Running schedule: FileBackupTask
+[2025-11-01 16:35:22] Running task: Copy Env (Backup type: zip)
+[2025-11-01 16:35:28] Task Copy Env completed: Zipped to: C:/Users/manojkumar.pilane/Documents/Python/Backup\ENV.zip
+[2025-11-01 16:36:46] Backup Process Started.
+[2025-11-01 16:36:46] Running schedule: FileBackupTask
+[2025-11-01 16:36:46] Running task: Copy Env (Backup type: zip)
+[2025-11-01 16:36:52] Task Copy Env completed: Zipped to: C:/Users/manojkumar.pilane/Documents/Python/Backup\ENV.zip
+[2025-11-01 16:41:53] Backup Process Started.
+[2025-11-01 16:41:53] Running schedule: FileBackupTask
+[2025-11-01 16:41:53] No matching tasks found for schedule
+[2025-11-01 16:48:12] Backup Process Started.
+[2025-11-01 16:48:12] Running schedule: FileBackupTask
+[2025-11-01 16:48:12] Running task: Copy Env (Backup type: zip)
+[2025-11-01 16:48:18] Task Copy Env completed: Zipped to: C:/Users/manojkumar.pilane/Documents/Python/Backup\ENV.zip
+[2025-11-01 16:49:17] Backup Process Started.
+[2025-11-01 16:49:17] Running schedule: FileBackupTask
+[2025-11-01 16:49:17] Running task: Copy Env (Backup type: zip)
+[2025-11-01 16:49:23] Task Copy Env completed: Zipped to: C:/Users/manojkumar.pilane/Documents/Python/Backup\ENV.zip
+[2025-11-01 16:51:59] Backup Process Started.
+[2025-11-01 16:51:59] Running schedule: FileBackupTask
+[2025-11-01 16:51:59] Running task: Copy Env (Backup type: zip)
+[2025-11-01 16:52:04] Task Copy Env completed: Zipped to: C:/Users/manojkumar.pilane/Documents/Python/Backup\ENV.zip
+[2025-11-01 16:52:46] Backup Process Started.
+[2025-11-01 16:52:46] Running schedule: FileBackupTask
+[2025-11-01 16:52:46] Running task: Copy Env (Backup type: zip)
+[2025-11-01 16:52:51] Task Copy Env completed: Zipped to: C:/Users/manojkumar.pilane/Documents/Python/Backup\ENV.zip
+[2025-11-01 17:26:55] Backup Process Started.
+[2025-11-01 17:26:55] No schedule CSV found
+[2025-11-01 17:26:55] No enabled schedule found
+[2025-11-01 17:28:24] Backup Process Started.
+[2025-11-01 17:28:24] Running schedule: FileBackupTask
+[2025-11-01 17:28:24] Running task: Copy Env ML & RND (Backup type: normal)
+[2025-11-01 17:28:42] Task Copy Env ML & RND completed: Copied successfully
+[2025-11-01 17:28:42] Running task: Copy Test (Backup type: normal)
+[2025-11-01 17:28:46] Task Copy Test completed: Copied successfully
+[2025-11-01 18:33:43] Backup Process Started.
+[2025-11-01 18:33:43] Running schedule: FileBackupTask
+[2025-11-01 18:33:43] Running task: Copy Test (Backup type: normal)
+[2025-11-01 18:33:46] Task Copy Test completed: Copied successfully
+[2025-11-01 18:33:46] Running task: Copy Env ML and RND (Backup type: normal)
+[2025-11-01 18:33:58] Task Copy Env ML and RND completed: Copied successfully

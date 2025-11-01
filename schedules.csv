@@ -1,4 +1,2 @@
-Schedule Name,Enabled,Start DateTime,Frequency,Selected Tasks,Program Path
-,,,,,
-,,,,,
-FileBackupTask,Yes,11/01/2025 11:54,Once,Copy Env,C:\Users\manojkumar.pilane\Documents\Python\GIT\UtilityPrograms\BackupTask\BackupProcess.py
+Schedule Name,Enabled,Start DateTime,Frequency,Python Path,Script Path,Start In,Selected Tasks
+FileBackupTask,Yes,11/01/2025 17:16,Once,C:/Users/manojkumar.pilane/Documents/Python/ENV/RND_ENV/Scripts/python.exe,C:/Users/manojkumar.pilane/Documents/Python/GIT/SystemSchedule/BackupProcess.py,C:/Users/manojkumar.pilane/Documents/Python/GIT/SystemSchedule,"Copy Env ML and RND,Copy Test"

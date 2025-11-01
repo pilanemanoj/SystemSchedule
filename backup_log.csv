@@ -3,3 +3,14 @@ DateTime,TaskName,Source,Destination,BackupType,Status,Message
 2025-11-01 16:15:33,Copy Env,C:/Users/manojkumar.pilane/Documents/Python/ENV,C:/Users/manojkumar.pilane/Documents/Python/Backup,zip,Success,Zipped to: C:/Users/manojkumar.pilane/Documents/Python/Backup\ENV.zip
 2025-11-01 16:24:00,Copy Env,C:/Users/manojkumar.pilane/Documents/Python/ENV,C:/Users/manojkumar.pilane/Documents/Python/Backup,zip,Success,Zipped to: C:/Users/manojkumar.pilane/Documents/Python/Backup\ENV.zip
 2025-11-01 16:27:32,Copy Env,C:/Users/manojkumar.pilane/Documents/Python/ENV,C:/Users/manojkumar.pilane/Documents/Python/Backup,zip,Success,Zipped to: C:/Users/manojkumar.pilane/Documents/Python/Backup\ENV.zip
+2025-11-01 16:34:59,Copy Env,C:/Users/manojkumar.pilane/Documents/Python/ENV,C:/Users/manojkumar.pilane/Documents/Python/Backup,zip,Success,Zipped to: C:/Users/manojkumar.pilane/Documents/Python/Backup\ENV.zip
+2025-11-01 16:35:28,Copy Env,C:/Users/manojkumar.pilane/Documents/Python/ENV,C:/Users/manojkumar.pilane/Documents/Python/Backup,zip,Success,Zipped to: C:/Users/manojkumar.pilane/Documents/Python/Backup\ENV.zip
+2025-11-01 16:36:52,Copy Env,C:/Users/manojkumar.pilane/Documents/Python/ENV,C:/Users/manojkumar.pilane/Documents/Python/Backup,zip,Success,Zipped to: C:/Users/manojkumar.pilane/Documents/Python/Backup\ENV.zip
+2025-11-01 16:48:18,Copy Env,C:/Users/manojkumar.pilane/Documents/Python/ENV,C:/Users/manojkumar.pilane/Documents/Python/Backup,zip,Success,Zipped to: C:/Users/manojkumar.pilane/Documents/Python/Backup\ENV.zip
+2025-11-01 16:49:23,Copy Env,C:/Users/manojkumar.pilane/Documents/Python/ENV,C:/Users/manojkumar.pilane/Documents/Python/Backup,zip,Success,Zipped to: C:/Users/manojkumar.pilane/Documents/Python/Backup\ENV.zip
+2025-11-01 16:52:04,Copy Env,C:/Users/manojkumar.pilane/Documents/Python/ENV,C:/Users/manojkumar.pilane/Documents/Python/Backup,zip,Success,Zipped to: C:/Users/manojkumar.pilane/Documents/Python/Backup\ENV.zip
+2025-11-01 16:52:51,Copy Env,C:/Users/manojkumar.pilane/Documents/Python/ENV,C:/Users/manojkumar.pilane/Documents/Python/Backup,zip,Success,Zipped to: C:/Users/manojkumar.pilane/Documents/Python/Backup\ENV.zip
+2025-11-01 17:28:42,Copy Env ML & RND,C:/Users/manojkumar.pilane/Documents/Python/ENV/RND_ENV,C:/Users/manojkumar.pilane/Documents/Python/Backup,normal,Success,Copied successfully
+2025-11-01 17:28:46,Copy Test,C:/Users/manojkumar.pilane/Documents/Python/ENV/Test_RND,C:/Users/manojkumar.pilane/Documents/Python/Backup,normal,Success,Copied successfully
+2025-11-01 18:33:46,Copy Test,C:/Users/manojkumar.pilane/Documents/Python/ENV/Test_RND,C:/Users/manojkumar.pilane/Documents/Python/Backup,normal,Success,Copied successfully
+2025-11-01 18:33:58,Copy Env ML and RND,C:/Users/manojkumar.pilane/Documents/Python/ENV/RND_ENV,C:/Users/manojkumar.pilane/Documents/Python/Backup,normal,Success,Copied successfully

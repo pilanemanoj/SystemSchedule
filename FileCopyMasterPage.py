@@ -266,7 +266,11 @@ class FileCopyMasterPage:
                 for row in reader:
                     if "task_name" in row and row["task_name"]:
                         tasks.add(row["task_name"])
-        TaskScheduleForm(self.root, sorted(tasks))
+        child = TaskScheduleForm(self.root, sorted(tasks))
+        child.transient(self.root)  # Makes window stay on top
+        child.grab_set()            # Modal - blocks events to other windows
+        self.root.wait_window(child) # Wait here until window is destroyed
+
 
 
 if __name__ == "__main__":

@@ -1,2 +1,5 @@
 task_name,source,backup,selected,BackupType
 Copy Env,C:/Users/manojkumar.pilane/Documents/Python/ENV,C:/Users/manojkumar.pilane/Documents/Python/Backup,True,Zip
+Copy Env ML & RND,C:/Users/manojkumar.pilane/Documents/Python/ENV/RND_ENV,C:/Users/manojkumar.pilane/Documents/Python/Backup,True,Normal
+Copy Test,C:/Users/manojkumar.pilane/Documents/Python/ENV/Test_RND,C:/Users/manojkumar.pilane/Documents/Python/Backup,True,Normal
+Copy Env ML and RND,C:/Users/manojkumar.pilane/Documents/Python/ENV/RND_ENV,C:/Users/manojkumar.pilane/Documents/Python/Backup,True,Normal
