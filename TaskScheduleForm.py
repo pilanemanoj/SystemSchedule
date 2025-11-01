@@ -269,7 +269,6 @@ class TaskScheduleForm(tk.Toplevel):
                 self.tasks_listbox.select_set(i)
 
     def delete_selected_schedule(self):
-        # Delete selected schedule from CSV and Listbox
         sel = self.schedule_listbox.curselection()
         if not sel:
             messagebox.showwarning("Delete", "Select a schedule to delete.")
@@ -282,12 +281,21 @@ class TaskScheduleForm(tk.Toplevel):
 
         # Remove from internal schedules list
         schedules = []
+        deleted_schedule_info = None
         if os.path.exists(SCHEDULE_CSV):
             with open(SCHEDULE_CSV, newline='', encoding='utf-8') as f:
                 reader = csv.DictReader(f)
                 for row in reader:
                     if row["Schedule Name"] != name_to_delete:
                         schedules.append(row)
+                    else:
+                        deleted_schedule_info = row
+
+        # Remove system (Windows) scheduled task using schtasks
+        if deleted_schedule_info:
+            deleted_schedule_info["Enabled"] = "No"  # Set to trigger deletion
+            update_system_schedule(deleted_schedule_info)
+
         # Save back to CSV
         if schedules:
             fieldnames = schedules[0].keys()
@@ -300,6 +308,7 @@ class TaskScheduleForm(tk.Toplevel):
         self.load_schedules_listbox()
         self.reset_fields()
         messagebox.showinfo("Delete", f"Schedule '{name_to_delete}' deleted.")
+
 
 
 if __name__ == "__main__":
