@@ -1,0 +1,9 @@
+[2025-11-01 16:23:52] Bckup Process Strted.
+[2025-11-01 16:24:42] Bckup Process Strted.
+[2025-11-01 16:27:26] Backup Process Started.
+[2025-11-01 16:27:26] Running schedule: FileBackupTask
+[2025-11-01 16:27:26] Running task: Copy Env (Backup type: zip)
+[2025-11-01 16:27:32] Task Copy Env completed: Zipped to: C:/Users/manojkumar.pilane/Documents/Python/Backup\ENV.zip
+[2025-11-01 16:28:04] Backup Process Started.
+[2025-11-01 16:28:04] No schedule CSV found
+[2025-11-01 16:28:04] No enabled schedule found

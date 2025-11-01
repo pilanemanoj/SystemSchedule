@@ -1,0 +1,4 @@
+Schedule Name,Enabled,Start DateTime,Frequency,Selected Tasks,Program Path
+,,,,,
+,,,,,
+FileBackupTask,Yes,11/01/2025 11:54,Once,Copy Env,C:\Users\manojkumar.pilane\Documents\Python\GIT\UtilityPrograms\BackupTask\BackupProcess.py

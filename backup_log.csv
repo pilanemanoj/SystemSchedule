@@ -1,0 +1,5 @@
+DateTime,TaskName,Source,Destination,BackupType,Status,Message
+2025-11-01 12:09:34,Copy Env,C:/Users/manojkumar.pilane/Documents/Python/ENV,C:/Users/manojkumar.pilane/Documents/Python/Backup,zip,Success,Zipped to: C:/Users/manojkumar.pilane/Documents/Python/Backup\ENV.zip
+2025-11-01 16:15:33,Copy Env,C:/Users/manojkumar.pilane/Documents/Python/ENV,C:/Users/manojkumar.pilane/Documents/Python/Backup,zip,Success,Zipped to: C:/Users/manojkumar.pilane/Documents/Python/Backup\ENV.zip
+2025-11-01 16:24:00,Copy Env,C:/Users/manojkumar.pilane/Documents/Python/ENV,C:/Users/manojkumar.pilane/Documents/Python/Backup,zip,Success,Zipped to: C:/Users/manojkumar.pilane/Documents/Python/Backup\ENV.zip
+2025-11-01 16:27:32,Copy Env,C:/Users/manojkumar.pilane/Documents/Python/ENV,C:/Users/manojkumar.pilane/Documents/Python/Backup,zip,Success,Zipped to: C:/Users/manojkumar.pilane/Documents/Python/Backup\ENV.zip
