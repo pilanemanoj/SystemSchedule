@@ -5,9 +5,14 @@ import zipfile
 from datetime import datetime
 from logger import log_message
 
-SCHEDULE_CSV = "schedules.csv"
-PATHS_CSV = "paths.csv"
-LOG_CSV = "backup_log.csv"
+# SCHEDULE_CSV = "schedules.csv"
+# PATHS_CSV = "paths.csv"
+# LOG_CSV = "backup_log.csv"
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+SCHEDULE_CSV = os.path.join(SCRIPT_DIR, 'schedules.csv')
+PATHS_CSV = os.path.join(SCRIPT_DIR, 'paths.csv')
+LOG_CSV = os.path.join(SCRIPT_DIR, 'backup_log.csv')
 
 log_message("Backup Process Started.")
 

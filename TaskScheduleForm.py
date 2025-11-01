@@ -6,7 +6,11 @@ import csv
 import os
 import subprocess
 
-SCHEDULE_CSV = "schedules.csv"
+# SCHEDULE_CSV = "schedules.csv"
+
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+SCHEDULE_CSV = os.path.join(SCRIPT_DIR, 'schedules.csv')
 
 
 TASK_XML_TEMPLATE = '''<?xml version="1.0" encoding="UTF-16"?>
