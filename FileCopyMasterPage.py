@@ -19,6 +19,9 @@ class FileCopyMasterPage:
         self.backup_type = tk.StringVar(value="Normal")  # New field; default to Normal
         self.editing_index = None
 
+        action_btn_frame = tk.Frame(root)
+        action_btn_frame.grid(row=4, column=1, columnspan=4, sticky='w', padx=2, pady=2)
+
         # Task Name Entry
         tk.Label(root, text="Task Name").grid(row=0, column=0, sticky='w')
         tk.Entry(root, textvariable=self.task_name, width=30).grid(row=0, column=1, columnspan=2, sticky='w', padx=2, pady=2)
@@ -39,11 +42,21 @@ class FileCopyMasterPage:
         backup_type_combo.grid(row=3, column=1, sticky='w', padx=2, pady=2)
 
         # Buttons
-        tk.Button(root, text="Add to Grid", command=self.add_to_grid).grid(row=4, column=1, sticky='ew', padx=2, pady=2)
-        tk.Button(root, text="Create Task", command=self.schedule_task).grid(row=4, column=2, sticky='ew', padx=2, pady=2)
-        tk.Button(root, text="Reset", command=self.grid_reset).grid(row=5, column=1, columnspan=2, sticky='ew', padx=2, pady=2)
 
-        tk.Button(root, text="Open Scheduler", command=self.open_scheduler).grid(row=5, column=3, padx=5, pady=2)
+        add_btn = tk.Button(action_btn_frame, text="Add to Grid", command=self.add_to_grid, width=11)
+        add_btn.pack(side=tk.LEFT, padx=(0, 6))
+
+        create_btn = tk.Button(action_btn_frame, text="Create Task", command=self.schedule_task, width=11)
+        create_btn.pack(side=tk.LEFT, padx=(0, 6))
+
+        reset_btn = tk.Button(action_btn_frame, text="Reset", command=self.grid_reset, width=7)
+        reset_btn.pack(side=tk.LEFT, padx=(0, 6))
+
+        delete_btn = tk.Button(action_btn_frame, text="Delete Selected", command=self.remove_selected_task, width=13)
+        delete_btn.pack(side=tk.LEFT, padx=(0, 6))
+
+        open_sched_btn = tk.Button(action_btn_frame, text="Open Scheduler", command=self.open_scheduler, width=13)
+        open_sched_btn.pack(side=tk.LEFT)
 
 
         # Treeview
@@ -270,6 +283,41 @@ class FileCopyMasterPage:
         child.transient(self.root)  # Makes window stay on top
         child.grab_set()            # Modal - blocks events to other windows
         self.root.wait_window(child) # Wait here until window is destroyed
+
+
+    def remove_selected_task(self):
+        selection = self.task_list.curselection()
+        if not selection:
+            messagebox.showwarning("Remove Selected", "Please select a task to remove.")
+            return
+        selected_task = self.task_list.get(selection[0])
+        confirm = messagebox.askyesno("Confirm Delete", f"Delete all entries for task '{selected_task}'?")
+        if not confirm:
+            return
+
+        # Read all tasks except those matching selected_task:
+        remaining_entries = []
+        if os.path.exists(GRID_CSV):
+            with open(GRID_CSV, newline='') as csvfile:
+                reader = csv.DictReader(csvfile)
+                for row in reader:
+                    if row.get("task_name") != selected_task:
+                        remaining_entries.append(row)
+
+        # Write back to CSV without the removed task
+        with open(GRID_CSV, "w", newline='') as csvfile:
+            fieldnames = ["task_name", "source", "backup", "selected", "BackupType"]
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(remaining_entries)
+
+        # Refresh UI
+        self.load_task_list_from_csv()
+        self.load_grid_from_csv()
+        self.refresh_tree()
+        self.reset_fields()
+        messagebox.showinfo("Remove Selected", f"Deleted task '{selected_task}' successfully.")
+
 
 
 

@@ -104,7 +104,7 @@ def update_system_schedule(schedule_info):
             print(f"Deleted system schedule for '{task_name}'")
         except Exception as e:
             print(f"Delete may fail if not created previously: {e}")
-            
+
 class TaskScheduleForm(tk.Toplevel):
     def __init__(self, master, tasks):
         super().__init__(master)
@@ -159,8 +159,11 @@ class TaskScheduleForm(tk.Toplevel):
 
         btn_frame = tk.Frame(left)
         btn_frame.grid(row=8, column=1, sticky='ew', pady=12)
+
         tk.Button(btn_frame, text="Save Schedule", command=self.save_schedule, width=15).pack(side=tk.LEFT, padx=4)
-        tk.Button(btn_frame, text="Reset", command=self.reset_fields, width=15).pack(side=tk.LEFT, padx=4)
+        tk.Button(btn_frame, text="Reset", command=self.reset_fields, width=10).pack(side=tk.LEFT, padx=2)
+        tk.Button(btn_frame, text="Delete", command=self.delete_selected_schedule, width=10).pack(side=tk.LEFT, padx=2)
+
 
         right = tk.Frame(self, bg="#fbf3f3", width=200)
         right.pack(side=tk.LEFT, fill=tk.BOTH, expand=False, padx=7)
@@ -264,6 +267,40 @@ class TaskScheduleForm(tk.Toplevel):
         for i, t in enumerate(self.tasks):
             if t in selected_tasks:
                 self.tasks_listbox.select_set(i)
+
+    def delete_selected_schedule(self):
+        # Delete selected schedule from CSV and Listbox
+        sel = self.schedule_listbox.curselection()
+        if not sel:
+            messagebox.showwarning("Delete", "Select a schedule to delete.")
+            return
+        index = sel[0]
+        name_to_delete = self.schedule_listbox.get(index)
+        confirm = messagebox.askyesno("Delete", f"Delete schedule '{name_to_delete}'? This action cannot be undone.")
+        if not confirm:
+            return
+
+        # Remove from internal schedules list
+        schedules = []
+        if os.path.exists(SCHEDULE_CSV):
+            with open(SCHEDULE_CSV, newline='', encoding='utf-8') as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    if row["Schedule Name"] != name_to_delete:
+                        schedules.append(row)
+        # Save back to CSV
+        if schedules:
+            fieldnames = schedules[0].keys()
+        else:
+            fieldnames = ["Schedule Name", "Enabled", "Start DateTime", "Frequency", "Python Path", "Script Path", "Start In", "Selected Tasks"]
+        with open(SCHEDULE_CSV, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(schedules)
+        self.load_schedules_listbox()
+        self.reset_fields()
+        messagebox.showinfo("Delete", f"Schedule '{name_to_delete}' deleted.")
+
 
 if __name__ == "__main__":
     task_names = ["Task 10", "Task 6", "Task 7", "Task 9", "Test 8"]
